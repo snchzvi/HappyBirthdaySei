@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Sei !!</title>
+  <link rel="stylesheet" href="Styles/styles.css" />
+</head>
+<body>
+
+  <div class="passcode-screen active" id="passcodeScreen">
+    <div class="passcode-card">
+      <div class="lock-icon">🔒</div>
+      <h2 class="passcode-title">Enter Passcode</h2>
+      <p class="hint-text">Hint: it's your birthday hehe</p>
+      <div class="pass-display" id="passDisplay">- - - - - -</div>
+      <div class="keypad">
+        <button onclick="enterDigit('1')">1</button>
+        <button onclick="enterDigit('2')">2</button>
+        <button onclick="enterDigit('3')">3</button>
+        <button onclick="enterDigit('4')">4</button>
+        <button onclick="enterDigit('5')">5</button>
+        <button onclick="enterDigit('6')">6</button>
+        <button onclick="enterDigit('7')">7</button>
+        <button onclick="enterDigit('8')">8</button>
+        <button onclick="enterDigit('9')">9</button>
+        <button onclick="resetPass()">Reset</button>
+        <button onclick="enterDigit('0')">0</button>
+        <button onclick="submitPass()">Enter</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content" id="mainContent">
+    <button class="readme-btn" onclick="toggleReadMe()">⸜(｡˃ ᵕ ˂ )⸝♡ Read Me First</button>
+
+    <div class="readme-popup" id="readmePopup">
+      <div class="readme-content">
+        <h2>Happy Birthday, My Love 💙</h2>
+        <p class="justified">
+          You are utterly ethereal and a saint in every way. It amazes me how lucky I am to have you in my life. You mean so much to me, and my love for you grows more with each passing day. You are just so perfect, and that’s the simple truth.<br><br>
+          You’ve become my reason to wake up, to smile, and to live, just so I can keep loving you, making you smile, giving you anything you want, and protecting you from this cruel world. You are my angel, my world, and my love for you will never grow cold. Just being with you makes me so happy. Everything feels lighter and better when I’m with you. You bring light and warmth, especially to me.<br><br>
+          There’s so much I admire about you. You are a strong, independent woman, and I love how well you take care of yourself. But even though you can, I want you to know that you have me now. When things get hard, or even when they don't, you can always rely on me.<br><br>
+          I love how sweet you are to me, that softness you have, and that pretty, pretty smile of yours. I love it so much. I hope today makes you feel all the love and happiness you give so effortlessly.<br><br>
+          Thank you for being mine. I can’t wait to keep making memories with you. Today is the first of your birthdays that we’re celebrating together, and I’m so excited for many more.<br><br>
+          Happy Birthday, my love, my heart, my amazing girlfriend !!!<br>
+        </p>
+        <p class="signature">From: your loving boyfriend ♡</p>
+        <button onclick="toggleReadMe()">Close</button>
+      </div>
+    </div>
+
+    <div class="portrait-container">
+      <img src="Assets/Sei1.jpg" alt="Portrait"/>
+      <img src="Assets/RibbonBlue.png" class="decorative" style="top: -20px; left: -20px;" />
+      <img src="Assets/RibbonBlue.png" class="decorative" style="bottom: -20px; right: -20px;" />
+    </div>
+
+    <img src="Assets/Butterfly.png" class="scrapbook-deco deco-1" alt="scrapbook design">
+    <img src="Assets/Heart.png" class="scrapbook-deco deco-2" alt="scrapbook design">
+    <img src="Assets/Flower.png" class="scrapbook-deco deco-3" alt="scrapbook design">
+    <img src="Assets/Star.png" class="scrapbook-deco deco-4" alt="scrapbook design">
+    <img src="Assets/ILY.png" class="scrapbook-deco deco-5" alt="scrapbook design">
+    <img src="Assets/Pretty.png" class="scrapbook-deco deco-6" alt="scrapbook design">
+
+    <div class="custom-player">
+      <img src="Assets/SeiAlbumArt.jpg" alt="Album Art" class="album-art">
+      <div class="track-info">
+        <h4 class="track-title">Ikaw Lang Patutunguhan</h4>
+        <p class="track-artist">Amiel Sol</p>
+      </div>
+      <audio id="audio" src="Assets/Amiel Sol - Ikaw Lang Patutunguhan.mp3"></audio>
+      <div class="player-controls">
+        <button onclick="togglePlay()" id="playBtn">▶</button>
+      </div>
+    </div>
+
+    <h3>my favorite photos of you</h3>
+    <p class="subtext">hover on each image</p>
+
+    <div class="gallery">
+      <div class="photo-item">
+        <img src="Assets/Fav1.jpg" alt="Fav 1" />
+        <div class="photo-desc" data-text="I really love this photo of you because you look so pretty and cute. That innocent face of yours is just mesmerizing."></div>
+      </div>
+      <div class="photo-item">
+        <img src="Assets/Fav2.jpg" alt="Fav 2" />
+        <div class="photo-desc" data-text="You look unbelievably hot in this photo. That sun-kissed face and your long black hair got me thinking how lucky I really am to have you."></div>
+      </div>
+      <div class="photo-item">
+        <img src="Assets/Fav3.jpg" alt="Fav 3" />
+        <div class="photo-desc" data-text="This was one of the first photos of you that I saw, though it was the covered version. It caught my attention, and even though your face was hidden, I already knew you were pretty."></div>
+      </div>
+      <div class="photo-item">
+        <img src="Assets/Fav4.jpg" alt="Fav 4" />
+        <div class="photo-desc" data-text="I really like it when you wear glasses. They suit that pretty face of yours so well."></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>

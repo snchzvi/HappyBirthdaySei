@@ -169,14 +169,11 @@ body {
 
 .portrait-container {
   position: relative;
-  margin: 20px auto;
-  max-width: 300px;
-  width: 90%;
+  margin: 20px 0;
 }
 
 .portrait-container img {
-  width: 100%;
-  height: auto;
+  max-width: 200px;
   border-radius: 10px;
   border: 3px solid #a3d8ff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25),
@@ -200,12 +197,35 @@ body {
   z-index: 1;
 }
 
-.deco-1 { top: 40px; left: 120px; }
-.deco-2 { top: 80px; right: 150px; }
-.deco-3 { top: 200px; right: 400px; }
-.deco-4 { top: 300px; left: 300px; }
-.deco-5 { top: 400px; right: 200px; }
-.deco-6 { top: 130px; left: 600px; }
+.deco-1 {
+  top: 40px;
+  left: 120px;
+}
+
+.deco-2 {
+  top: 80px;
+  right: 150px;
+}
+
+.deco-3 {
+  top: 200px;
+  right: 400px;
+}
+
+.deco-4 {
+  top: 300px;
+  left: 300px;
+}
+
+.deco-5 {
+  top: 400px;
+  right: 200px;
+}
+
+.deco-6 {
+  top: 130px;
+  left: 600px;
+}
 
 .custom-player {
   background-color: #d6ecff;
@@ -219,7 +239,6 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   gap: 15px;
   border: 2px solid #b8dbff;
-  flex-wrap: wrap;
 }
 
 .album-art {
@@ -270,15 +289,13 @@ body {
 
 .gallery {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
 }
 
 .gallery img {
-  width: 100%;
-  max-width: 180px;
+  width: 200px;
   height: auto;
   border-radius: 10px;
   border: 3px solid #a3d8ff;
@@ -329,32 +346,4 @@ body {
   margin-bottom: 10px;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
-}
-
-/* Responsive Enhancements */
-@media (max-width: 600px) {
-  .keypad {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .pass-display {
-    font-size: 24px;
-    letter-spacing: 8px;
-    width: 90%;
-  }
-
-  .readme-popup {
-    padding: 20px;
-    font-size: 14px;
-  }
-
-  .custom-player {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .deco-1, .deco-2, .deco-3, .deco-4, .deco-5, .deco-6 {
-    display: none;
-  }
 }

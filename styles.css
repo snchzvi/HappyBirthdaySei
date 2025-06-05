@@ -1,0 +1,351 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #cce6ff;
+  color: #333;
+}
+
+.passcode-screen,
+.main-content {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.passcode-screen.active,
+.main-content.active {
+  display: flex;
+}
+
+.passcode-card {
+  background: #f0f8ff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.lock-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.passcode-title {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #5dade2;
+  margin: 0;
+  font-size: 28px;
+}
+
+.hint-text {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.pass-display {
+  font-size: 28px;
+  letter-spacing: 10px;
+  border: 2px dashed #7ecbff;
+  padding: 12px;
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 12px;
+  justify-content: center;
+}
+
+.keypad button {
+  background-color: #addfff;
+  border: none;
+  border-radius: 14px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+}
+
+.keypad button:hover {
+  background-color: #90cfff;
+  transform: scale(1.05);
+}
+
+.readme-btn {
+  background-color: #add8ff;
+  color: #000000;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.readme-btn:hover {
+  background-color: #92cfff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.readme-popup {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e0f0ff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 80, 150, 0.25);
+  z-index: 100;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 2px solid #a3d8ff;
+}
+
+.readme-popup.active {
+  display: block;
+}
+
+.readme-content {
+  color: #003d66;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.readme-content h2 {
+  font-size: 22px;
+  color: #2d6ea1;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.readme-content .signature {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #3a6fa8;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.readme-content button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #add8ff;
+  border: none;
+  border-radius: 25px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.readme-content button:hover {
+  background-color: #92cfff;
+  transform: scale(1.05);
+}
+
+.portrait-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+.portrait-container img {
+  max-width: 200px;
+  border-radius: 10px;
+  border: 3px solid #a3d8ff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25),
+              0 0 30px rgba(163, 216, 255, 0.4);
+}
+
+.decorative {
+  position: absolute;
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+  border: none !important;
+  outline: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.scrapbook-deco {
+  position: absolute;
+  width: 150px;
+  z-index: 1;
+}
+
+.deco-1 {
+  top: 40px;
+  left: 120px;
+}
+
+.deco-2 {
+  top: 80px;
+  right: 150px;
+}
+
+.deco-3 {
+  top: 200px;
+  right: 400px;
+}
+
+.deco-4 {
+  top: 300px;
+  left: 300px;
+}
+
+.deco-5 {
+  top: 400px;
+  right: 200px;
+}
+
+.deco-6 {
+  top: 130px;
+  left: 600px;
+}
+
+.custom-player {
+  background-color: #d6ecff;
+  color: #333;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  gap: 15px;
+  border: 2px solid #b8dbff;
+}
+
+.album-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #a3d8ff;
+}
+
+.track-info {
+  flex: 1;
+}
+
+.track-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d6ea1;
+}
+
+.track-artist {
+  margin: 0;
+  font-size: 14px;
+  color: #5a8dbf;
+  opacity: 0.8;
+}
+
+.player-controls button {
+  background-color: #addfff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.player-controls button:hover {
+  background-color: #90cfff;
+  transform: scale(1.1);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #a3d8ff;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(163, 216, 255, 0.4);
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.photo-item img {
+  transition: opacity 0.3s ease;
+}
+
+.photo-item:hover img {
+  opacity: 0.3;
+}
+
+.photo-desc {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  color: #004466;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  white-space: pre-wrap;
+}
+
+.photo-item:hover .photo-desc {
+  opacity: 1;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #5a8dbf;
+  opacity: 0.8;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
